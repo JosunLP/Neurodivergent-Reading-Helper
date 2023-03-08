@@ -1,7 +1,7 @@
 {
   "name": "neurodivergent-reading-helper",
   "title": "Neurodivergent Reading Helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small tool to help you read books and articles faster and more efficiently.",
   "main": "index.ts",
   "scripts": {

@@ -2,7 +2,9 @@ export class Parser {
   private static readonly breakupCharacters = ["-", "_"];
 
   public static parse(input: string): string {
-    const words = input.split(" ");
+
+    let output = this.purgeHTMLTags(input);
+    const words = output.split(" ");
     const formattedWords = words.map((word) => {
       const formattedWord = this.formatWordRecursive(
         word,
@@ -12,21 +14,19 @@ export class Parser {
         ? formattedWord.join("")
         : formattedWord;
     });
-    return formattedWords.join(" ");
+    output = input;
+    words.forEach((word, index) => {
+      output = output.replace(word, formattedWords[index]);
+    });
+
+    return output;
   }
 
   private static formatWord(word: string): string {
-    if (word.includes("<")) {
-      return word;
-    }
-
     const letters = word.split("");
 
-    if (letters.length <= 3) {
-      const thirtyPercent = Math.floor((letters.length * 3) / 10);
-      for (let i = 0; i < thirtyPercent; i++) {
-        letters[i] = `<b>${letters[i]}</b>`;
-      }
+    if (letters.length <= 3 && letters.length > 0) {
+      letters[0] = `<b>${letters[0]}</b>`;
     } else if (letters.length == 4) {
       const fiftyPercent = Math.floor((letters.length * 5) / 10);
       for (let i = 0; i < fiftyPercent; i++) {
@@ -61,5 +61,9 @@ export class Parser {
     } else {
       return this.formatWord(word);
     }
+  }
+
+  private static purgeHTMLTags(input: string): string {
+    return input.replace(/(<([^>]+)>)/gi, "");
   }
 }
