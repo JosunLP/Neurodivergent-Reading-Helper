@@ -3,17 +3,11 @@
     "downloadUrl": "",
     "supportUrl": "",
     "iconUrl": "./assets/icon.png",
-    "includes": [
-        "https://*.ingress.com/intel*"
-    ],
-    "excludes": [
-        "https://*.ingress.com/mission/*"
-    ],
     "requires": [],
     "recources": [],
     "connecters": [],
     "matches": [
-        "https://*.ingress.com/intel*"
+        "https://*"
     ],
     "runAt": "document-start",
     "grants": [
