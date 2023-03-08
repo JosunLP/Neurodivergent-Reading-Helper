@@ -7,6 +7,7 @@ class App {
 
     constructor() {
         this.main();
+        console.log("NRH - App started");
     }
     
     private main() {

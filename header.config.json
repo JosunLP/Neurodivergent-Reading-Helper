@@ -1,15 +1,15 @@
 {
     "updateUrl": "",
     "downloadUrl": "",
-    "supportUrl": "",
+    "supportUrl": "https://ko-fi.com/josunlp",
     "iconUrl": "./assets/icon.png",
     "requires": [],
     "recources": [],
     "connecters": [],
     "matches": [
-        "https://*"
+        "*://*/*"
     ],
-    "runAt": "document-start",
+    "runAt": "document-idle",
     "grants": [
         "GM_setValue",
         "GM_getValue"

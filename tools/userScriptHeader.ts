@@ -103,7 +103,7 @@ async function generateUserScriptHeader() {
   }
 
   let header = `// ==UserScript==
-// @name         ${pkg.name}
+// @name         ${pkg.title}
 // @namespace    ${pkg.homepage}
 // @version      ${pkg.version}
 // @description  ${pkg.description}
