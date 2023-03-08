@@ -1,3 +1,5 @@
+import { Parser } from "./classes/parser";
+
 /**
  * App
  */
@@ -8,7 +10,10 @@ class App {
     }
     
     private main() {
-        console.log('Hello World!');
+        const paragraphs = document.querySelectorAll("p");
+        paragraphs.forEach((p) => {
+            p.innerHTML = Parser.parse(p.innerHTML);
+        });
     }
 }
 

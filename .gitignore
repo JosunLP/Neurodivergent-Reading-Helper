@@ -645,3 +645,4 @@ FodyWeavers.xsd
 
 dist
 tools/userScriptHeader.js
+package-lock.json
