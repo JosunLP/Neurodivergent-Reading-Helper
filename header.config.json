@@ -1,6 +1,6 @@
 {
-    "updateUrl": "",
-    "downloadUrl": "",
+    "updateUrl": "https://raw.githubusercontent.com/JosunLP/Neurodivergent-Reading-Helper/main/dist/neurodivergent-reading-helper.bundle.js",
+    "downloadUrl": "https://raw.githubusercontent.com/JosunLP/Neurodivergent-Reading-Helper/main/dist/neurodivergent-reading-helper.bundle.js",
     "supportUrl": "https://ko-fi.com/josunlp",
     "iconUrl": "./assets/icon.png",
     "requires": [],
