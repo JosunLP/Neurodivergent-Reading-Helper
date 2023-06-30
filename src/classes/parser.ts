@@ -1,5 +1,11 @@
+import { H } from "friendly-helper";
+import StringController from "./string";
+
+
 export class Parser {
   private static readonly breakupCharacters = ["-", "_"];
+
+  private static readonly stringController: StringController = StringController.getInstance();
 
   public static parse(input: string): string {
 
@@ -64,6 +70,6 @@ export class Parser {
   }
 
   private static purgeHTMLTags(input: string): string {
-    return input.replace(/(<([^>]+)>)/gi, "");
+    return this.stringController.purgeAll(input);
   }
 }
